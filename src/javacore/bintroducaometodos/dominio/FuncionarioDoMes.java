@@ -1,22 +1,48 @@
 package javacore.bintroducaometodos.dominio;
 
 public class FuncionarioDoMes {
-     public String nome;
-     public int idade;
-     public double salario1;
-     public double salario2;
-     public  double salario3;
+     private String nome;
+     private int idade;
+     private double [] salarios;
+     private  double media;
 
     public void imprimirDados(){
-        System.out.println("Dados Funcionario");
-        System.out.println("Nome:" + nome);
-        System.out.println("Idade:" + idade);
-        System.out.printf("Salarios: %.2f, %.2f, %.2f%n",salario1, salario2, salario3);
-        System.out.printf("Media Salarial:  %.2f%n", mediaSalario());
+        System.out.println(this.nome);
+        System.out.println(this.idade);
 
-        System.out.println("Fim....");
+        for (double salario : salarios) {
+            System.out.println(salario + "   ");
+        }
+
+
     }
-    public double mediaSalario() {
-        return (salario1 + salario2 + salario3) / 3;
+    public void mediaSalario() {
+        for (double salario : salarios) {
+            media += salario;
+        }
+        media = media/salarios.length;
+        System.out.println("Media Salarial  " + media);
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+    public void setSalarios(double[] salarios) {
+        this.salarios = salarios;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public int getIdade(){
+        return idade;
+    }
+    public double[] getSalarios() {
+        return salarios;
+    }
+    public double getMedia() {
+        return media;
     }
 }
