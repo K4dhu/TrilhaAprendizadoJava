@@ -3,7 +3,7 @@ package javacore.Fmodificadoresstatico.Dominio;
 public class Carro {
     private  String nome;
     private  double velocidadeMaxima;
-    private  static double velocidadeLimite = 250;
+    private   double velocidadeLimite = 250;
 
 
     public Carro(String nome, double velocidadeMaxima ) {
@@ -16,7 +16,7 @@ public class Carro {
         System.out.println("---------------------");
         System.out.println("Nome " + this.nome);
         System.out.println("Velocidade Maxima  " + this.velocidadeMaxima);
-        System.out.println("Velocidade Limite  "+ Carro.velocidadeLimite);
+        System.out.println("Velocidade Limite  "+ this.velocidadeLimite);
     }
 
     public String getNome() {
@@ -31,10 +31,10 @@ public class Carro {
     public void setVelocidadeMaxima(double velocidadeMaxima) {
         this.velocidadeMaxima = velocidadeMaxima;
     }
-    public static double getVelocidadeLimite() {
-        return Carro.velocidadeLimite;
+    public  double getVelocidadeLimite() {
+        return this.velocidadeLimite;
     }
-    public static void setVelocidadeLimite(double velocidadeLimite) {
-        Carro.velocidadeLimite = velocidadeLimite;
+    public  void setVelocidadeLimite(double velocidadeLimite) {
+        this.velocidadeLimite = velocidadeLimite;
     }
 }

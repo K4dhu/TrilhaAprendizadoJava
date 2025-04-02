@@ -11,10 +11,12 @@ public class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
 
+
     }
-    public void setIdade(int II) {
+    public int  setIdade(int II) {
         if( II < 0)
             System.out.println("Idade Incorreta!");
+        return II;
     }
     public String getNome() {
         return this.nome;

@@ -8,10 +8,10 @@ public class PessoaTest01 {
 
        // p1.nome = "Neji";
         p1.setNome("Neji");
-        p1.setIdade(20);
+       // p1.setIdade(20);
 
      //    p1.imprimi();
         System.out.println(p1.getNome());
-        System.out.println(p1.getIdade());
+        System.out.println(p1.setIdade(20));
     }
 }
